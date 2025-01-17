@@ -9,6 +9,10 @@ import java.net.ServerSocket;
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * 실제로 작동하는 아주 간단한 HTTP 서버 예제입니다.
+ * 이 예제를 실행하려면 Main 클래스의 main 메서드에서 new BasicHttpExample().run()을 호출하면 됩니다.
+ */
 public class BasicHttpExample {
     public void run() {
         System.out.println("Hello, World!");
