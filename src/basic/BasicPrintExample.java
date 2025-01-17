@@ -9,7 +9,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class BasicPrintExample {
-    void run() {
+    public void run() {
         System.out.println("Hello, World!");
 
         try {
