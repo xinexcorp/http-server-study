@@ -24,7 +24,7 @@ public class BasicPrintExample {
             try {
                 while (true) {
                     byte read = inputStream.readByte();
-                    System.out.println(read);
+                    System.out.println((char) read);
                 }
             } catch (EOFException e) {
                 serverSocket.close();
