@@ -1,4 +1,6 @@
-package http;
+package winter.http;
+
+import winter.controller.Controller;
 
 import java.io.*;
 import java.net.InetSocketAddress;
