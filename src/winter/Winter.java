@@ -5,6 +5,7 @@ import winter.http.Http;
 import winter.http.HttpRequest;
 import winter.http.HttpResponse;
 
+import java.io.EOFException;
 import java.io.IOException;
 
 /**
@@ -36,6 +37,8 @@ public class Winter {
 
             http.sendResponse(response);
             // 응답을 던져줘요
+        } catch (EOFException e) {
+            System.out.println("클라이언트가 간만 보다가 나감ㅋㅎ 얼탱이 ㅋㅎ");
         } catch (IOException e) {
             System.out.println("요청과 응답을 처리하는 도중 어딘가에서 문제가 생겼습니다:");
             e.printStackTrace();

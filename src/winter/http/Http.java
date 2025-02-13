@@ -43,6 +43,12 @@ public class Http {
         BufferedReader inputReader = new BufferedReader(new InputStreamReader(currentClientSocket.getInputStream(), StandardCharsets.UTF_8));
 
         String startLine = inputReader.readLine();
+        if (startLine == null) {
+            // 클라이언트가 소켓 연결은 만들어놓고 근데 바로 끊어버리면(stream end) 여기에 도착합니다.
+            // 그러면은 더 처리할 것도 없음 그냥 때려치셈요 ㅋㅎ
+            throw new EOFException();
+        }
+
         request.method = startLine.split(" ")[0];
         request.uri = startLine.split(" ")[1];
 
