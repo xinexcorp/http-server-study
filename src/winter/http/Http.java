@@ -80,6 +80,8 @@ public class Http {
      * @param response
      */
     public void sendResponse(HttpResponse response) throws IOException {
+
+
         if (currentClientSocket == null) {
             throw new IllegalStateException("있을 수 없는 일이라며 난 울었어~");
         }

@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class HttpRequest {
-    String method;
-    String uri;
-    Map<String, String> headers = new HashMap<String, String>();
-    String body;
+    public String method;
+    public String uri;
+    public Map<String, String> headers = new HashMap<String, String>();
+    public String body;
 }
